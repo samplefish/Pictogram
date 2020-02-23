@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/graph"
+    android:orientation="vertical">
+
+    <com.william.guessdraw.DrawingViewGuesser
+        android:layout_below="@id/guessText"
+        android:id="@+id/drawing"
+        android:layout_width="fill_parent"
+        android:layout_height="365dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/drawing"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Guess"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        app:srcCompat="@drawable/clock_small"
+        android:layout_below="@+id/editText1"
+        android:layout_toEndOf="@+id/Scores" />
+
+    <TextView
+        android:id="@+id/Scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/drawing"
+        android:layout_toStartOf="@+id/editText1" />
+
+</RelativeLayout>
